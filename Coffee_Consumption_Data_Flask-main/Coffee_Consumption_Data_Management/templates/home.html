@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Store Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Coffee Data !</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Discover Coffee Data easily .</p>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 CZ</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Coffee Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Add New Coffee Type</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Add New Coffee Data</h1>
+        <form action="{{ url_for('add_coffee') }}" method="post">
+            <div>
+                <label for="coffee_type">Coffee Type:</label>
+                <input type="text" id="coffee_type" name="coffee_type" required>
+            </div>
+            <div>
+                <label for="country_name">Country:</label>
+                <input type="text" id="country_name" name="country_name" required>
+            </div>
+            <div>
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" required>
+            </div>
+            <div>
+                <label for="consumption">Consumption:</label>
+                <input type="number" step="any" id="consumption" name="consumption" required>
+            </div>
+            <div>
+                <button type="submit">Add Coffee Data</button>
+            </div>
+        </form>
+    </main>
+    <footer class="footer">
+        <p>&copy;Coffee Data</p>
+    </footer>
+</body>
+</html>
